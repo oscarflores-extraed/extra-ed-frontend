@@ -1,13 +1,28 @@
+/**
+ * @file Home.jsx
+ * @description Master landing page for the Extra Ed application.
+ * 
+ * Highlights:
+ * 1. Responsive dual-video hero background (swaps media based on mobile/desktop display state).
+ * 2. Custom `framer-motion` scroll intersections tracing scroll-Y axis to trigger opacity/transforms.
+ * 3. Interactive manual Google Reviews carousel bound to a horizontal-pane `useRef` event.
+ */
+
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Star, BookOpen, Heart, Leaf, Target, Users, Layers, Activity } from 'lucide-react';
 
-import IndexVideoHor from '../assets/01_index/index_video_hor.mp4';
-import IndexVideoVer from '../assets/01_index/index_video_ver.mp4';
-import ImageA from '../assets/01_index/image_a.png';
-import ImageB from '../assets/01_index/image_b.png';
+// Corrected deep-level paths resolving the nested folder restructure
+import IndexVideoHor from '../../assets/01_index/index_video_hor.mp4';
+import IndexVideoVer from '../../assets/01_index/index_video_ver.mp4';
+import ImageA from '../../assets/01_index/image_a.png';
+import ImageB from '../../assets/01_index/image_b.png';
 
+/**
+ * Renders an individual Google Review card mapping framer-motion micro-physics
+ * @param {Object} props Destructured name, date, rating, review string
+ */
 const GoogleReviewCard = ({ name, date, rating, review }) => (
   <motion.div 
     whileHover={{ scale: 1.02, y: -5 }}
@@ -20,6 +35,7 @@ const GoogleReviewCard = ({ name, date, rating, review }) => (
       <div>
         <h4 className="font-extrabold text-slate-800 text-lg">{name}</h4>
         <div className="flex items-center gap-1 text-[var(--brand-yellow)] mt-1">
+           {/* Generates solid stars dynamically mapped to integer rating */}
           {[...Array(rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
         </div>
         <p className="text-xs text-slate-400 mt-2 font-bold uppercase tracking-widest">{date}</p>
@@ -29,6 +45,10 @@ const GoogleReviewCard = ({ name, date, rating, review }) => (
   </motion.div>
 );
 
+/**
+ * Reusable intersection observer wrapper. 
+ * Automatically triggers inner children opacity mapped to the browser Viewport.
+ */
 const FadeInSection = ({ children, delay = 0 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -50,10 +70,12 @@ const SummaryCard = ({ icon: Icon, title, description, link, colorClass }) => (
 );
 
 const Home = () => {
+  // Binds to Framer Motion window Y-axis hook allowing parallax Hero fading
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacityHero = useTransform(scrollY, [0, 500], [1, 0]);
 
+  // Captures the Google Reviews carousel container for native Javascript X-axis click scrolling
   const scrollContainerRef = useRef(null);
   
   const scrollLeft = () => {
@@ -74,26 +96,31 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-[var(--brand-white)] font-sans overflow-x-hidden">
       
-      {/* Hero Section */}
+      {/* 
+        Hero Section (Uses z-index stacking. Motion.div acts as relative anchor) 
+      */}
       <section className="relative h-screen w-full flex items-center justify-center bg-[var(--brand-dark)] overflow-hidden">
         <motion.div style={{ y: y1 }} className="absolute inset-0 w-full h-full scale-[1.05]">
           <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[4px] mix-blend-multiply z-10 w-full h-full object-cover pointer-events-none"></div>
-          {/* Desktop Horizontal Video */}
+          
+          {/* Desktop Horizontal Video - Triggers Native Block on md breakpoint */}
           <video autoPlay loop muted playsInline className="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none">
              <source src={IndexVideoHor} type="video/mp4" />
           </video>
-          {/* Mobile Vertical Video */}
+          
+          {/* Mobile Vertical Video - Replaces horizontal flow avoiding CSS object-fit stretching */}
           <video autoPlay loop muted playsInline className="block md:hidden absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none">
              <source src={IndexVideoVer} type="video/mp4" />
           </video>
         </motion.div>
 
-        {/* Hero Content */}
+        {/* Hero Content Overlay */}
         <motion.div style={{ opacity: opacityHero }} className="relative z-20 text-center px-4 max-w-6xl flex flex-col items-center mt-16">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
             className="text-6xl md:text-[7rem] font-extrabold tracking-tight drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)] mb-6 leading-[1.1]"
           >
+            {/* Split bi-color span mapped directly to exact brand specs */}
             <span className="text-white">Welcome to</span> <span className="text-[var(--brand-orange)] drop-shadow-[0_5px_15px_rgba(255,132,0,0.6)]">Extra Ed</span>
           </motion.h1>
           <motion.p 
@@ -123,7 +150,10 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* Welcome to Extra Ed Section with Column Image Layout */}
+      {/* 
+        Welcome to Extra Ed Section
+        Executed as a Strict Centered Column ensuring mobile parity for transparent PNG layouts. 
+      */}
       <section className="py-40 px-6 bg-white relative z-30">
          <div className="max-w-4xl mx-auto flex flex-col items-center justify-center text-center gap-12">
             
@@ -239,40 +269,16 @@ const Home = () => {
          {/* Customized Summary Hover Cards Block */}
          <div className="max-w-[90%] mx-auto mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FadeInSection delay={0.1}>
-              <SummaryCard 
-                icon={Heart} 
-                title="Economic Inclusivity" 
-                description="Ensuring every single child is included, regardless of family standing." 
-                link="/economic-inclusivity" 
-                colorClass="bg-blue-50 text-[var(--brand-blue)] group-hover:bg-[var(--brand-blue)] group-hover:text-white"
-              />
+              <SummaryCard icon={Heart} title="Economic Inclusivity" description="Ensuring every single child is included, regardless of family standing." link="/economic-inclusivity" colorClass="bg-blue-50 text-[var(--brand-blue)] group-hover:bg-[var(--brand-blue)] group-hover:text-white" />
             </FadeInSection>
             <FadeInSection delay={0.2}>
-              <SummaryCard 
-                icon={Target} 
-                title="TDSB Partner" 
-                description="Serving passionately as a designated Toronto District School Board Partner." 
-                link="/about-us" 
-                colorClass="bg-orange-50 text-[var(--brand-orange)] group-hover:bg-[var(--brand-orange)] group-hover:text-white"
-              />
+              <SummaryCard icon={Target} title="TDSB Partner" description="Serving passionately as a designated Toronto District School Board Partner." link="/about-us" colorClass="bg-orange-50 text-[var(--brand-orange)] group-hover:bg-[var(--brand-orange)] group-hover:text-white" />
             </FadeInSection>
             <FadeInSection delay={0.3}>
-              <SummaryCard 
-                icon={Leaf} 
-                title="Environmental Activism" 
-                description="Deep sustainability efforts defined by massive tree planting drives." 
-                link="/sustainability" 
-                colorClass="bg-green-50 text-[var(--brand-green)] group-hover:bg-[var(--brand-green)] group-hover:text-white"
-              />
+              <SummaryCard icon={Leaf} title="Environmental Activism" description="Deep sustainability efforts defined by massive tree planting drives." link="/sustainability" colorClass="bg-green-50 text-[var(--brand-green)] group-hover:bg-[var(--brand-green)] group-hover:text-white" />
             </FadeInSection>
             <FadeInSection delay={0.4}>
-              <SummaryCard 
-                icon={Star} 
-                title="Quality Programming" 
-                description="Rigorous instructor training and meticulously engineered curriculums." 
-                link="/programs" 
-                colorClass="bg-yellow-50 text-[var(--brand-yellow)] group-hover:bg-[var(--brand-yellow)] group-hover:text-[var(--brand-dark)]"
-              />
+              <SummaryCard icon={Star} title="Quality Programming" description="Rigorous instructor training and meticulously engineered curriculums." link="/programs" colorClass="bg-yellow-50 text-[var(--brand-yellow)] group-hover:bg-[var(--brand-yellow)] group-hover:text-[var(--brand-dark)]" />
             </FadeInSection>
          </div>
       </section>
@@ -288,37 +294,20 @@ const Home = () => {
            </div>
            
            <div className="flex items-center gap-4">
-               <button 
-                 onClick={scrollLeft} 
-                 className="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-1 transition-all border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-lg"
-                 aria-label="Scroll left"
-               >
+               <button onClick={scrollLeft} className="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-1 transition-all border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-lg" aria-label="Scroll left">
                  <ChevronLeft size={36} />
                </button>
-               <button 
-                 onClick={scrollRight} 
-                 className="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-1 transition-all border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-lg"
-                 aria-label="Scroll right"
-               >
+               <button onClick={scrollRight} className="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 hover:-translate-y-1 transition-all border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-lg" aria-label="Scroll right">
                  <ChevronRight size={36} />
                </button>
            </div>
         </div>
 
-        <div 
-          ref={scrollContainerRef} 
-          className="flex overflow-x-auto gap-10 pb-16 px-4 snap-x snap-mandatory hide-scrollbar max-w-[95%] xl:max-w-[1400px] mx-auto w-full relative z-10 scroll-smooth cursor-grab active:cursor-grabbing"
-        >
-          {mockReviews.map((review, idx) => (
-             <GoogleReviewCard key={idx} {...review} />
-          ))}
-          {/* Duplicates for scrolling effect visualization */}
-          {mockReviews.map((review, idx) => (
-             <GoogleReviewCard key={idx+"_copy"} {...review} />
-          ))}
-          {mockReviews.map((review, idx) => (
-             <GoogleReviewCard key={idx+"_copy2"} {...review} />
-          ))}
+        <div ref={scrollContainerRef} className="flex overflow-x-auto gap-10 pb-16 px-4 snap-x snap-mandatory hide-scrollbar max-w-[95%] xl:max-w-[1400px] mx-auto w-full relative z-10 scroll-smooth cursor-grab active:cursor-grabbing">
+          {mockReviews.map((review, idx) => ( <GoogleReviewCard key={idx} {...review} /> ))}
+          {/* Duplicates for scrolling effect visualization mapping */}
+          {mockReviews.map((review, idx) => ( <GoogleReviewCard key={idx+"_copy"} {...review} /> ))}
+          {mockReviews.map((review, idx) => ( <GoogleReviewCard key={idx+"_copy2"} {...review} /> ))}
         </div>
       </section>
     </div>

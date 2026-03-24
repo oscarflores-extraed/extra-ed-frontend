@@ -1,28 +1,55 @@
+/**
+ * @file OurTeam.jsx
+ * @description Generates the "Meet the Team" interactive profile grid highlighting directors and staff.
+ * 
+ * **KEY ARCHITECTURAL NOTE:**
+ * This component utilizes native CSS 3D transforms (`preserve-3d`, `rotate-y-180`) strictly mapped
+ * inside Tailwind's absolute positioning wrappers to generate ultra-smooth, hardware-accelerated 
+ * Flip-Cards without relying on bulky Javascript physics engines.
+ * 
+ * **Dependencies:** Local `teamData` JSON database providing the mapping arrays.
+ */
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import teamData from '../data/team.json';
 
+// Fixed deep-level path resolving the nested `03_our_team` folder restructure
+import teamData from '../../data/team.json';
+
+/**
+ * Functional component constructing an individual interactive profile flip card.
+ * Triggers full 180-degree block rotation exclusively on CSS `group-hover`.
+ * @param {Object} member - Individual dictionary payload matching the teamData array shape.
+ */
 const ProfileFlipCard = ({ member }) => {
   return (
     <div className="perspective-1000 w-full h-[450px] group cursor-pointer block">
       <motion.div
         className="relative w-full h-full preserve-3d transition-all duration-700 group-hover:rotate-y-180"
       >
-        {/* Front */}
+        {/* Front Face (Director Image and Name) */}
         <div className="absolute inset-0 backface-hidden bg-white rounded-[2rem] shadow-xl overflow-hidden border border-slate-100 flex flex-col items-center">
             <div className="w-full h-3/5 bg-slate-200 flex items-center justify-center text-slate-400 relative overflow-hidden">
+               {/* 
+                  TODO: Swap this raw text placeholder block with a native <img /> tag 
+                  importing the director's specific JPG matching `member.imagePath` 
+               */}
                <div className="absolute inset-0 bg-blue-900/10"></div>
-               <span className="font-bold tracking-widest text-xs uppercase relative z-10">IMAGE PROFILE</span>
+               <span className="font-bold tracking-widest text-xs uppercase relative z-10">IMAGE PROFILE: {member.name}</span>
             </div>
             <div className="h-2/5 w-full flex flex-col items-center justify-center bg-white p-6">
                <h3 className="text-2xl font-extrabold text-[var(--brand-dark)] mb-1">{member.name}</h3>
                <p className="text-[var(--brand-blue)] font-bold uppercase tracking-widest text-xs mt-2">{member.role}</p>
             </div>
         </div>
-        {/* Back */}
+
+        {/* Back Face (Bio and Quotes) - Explicitly hidden by default via backface-hidden */}
         <div className="absolute inset-0 backface-hidden bg-[var(--brand-dark)] rounded-[2rem] shadow-xl flex flex-col items-center justify-center p-10 text-center text-white rotate-y-180">
             <p className="text-xl italic leading-relaxed text-slate-300 font-light drop-shadow-sm">"{member.flipQuote}"</p>
+            
+            {/* Visual aesthetic horizontal break mapping brand styling */}
             <div className="w-16 h-1 bg-[var(--brand-green)] mt-10 rounded-full shadow-[0_0_15px_rgba(46,162,24,0.8)]"></div>
+            
             <p className="mt-8 font-medium text-slate-400 text-base leading-relaxed">{member.bio}</p>
         </div>
       </motion.div>
@@ -35,6 +62,7 @@ const OurTeam = () => {
     <div className="min-h-screen bg-slate-50 pt-40 pb-32 px-6">
       <div className="max-w-7xl mx-auto">
         
+        {/* Isolated staggered load-in text header container */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto mb-28"
@@ -46,11 +74,12 @@ const OurTeam = () => {
           </p>
         </motion.div>
 
+        {/* CSS CSS CSS CSS CSS CSS Grid generating the responsive profile layout constraints */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {teamData.map((member) => (
              <ProfileFlipCard key={member.id} member={member} />
           ))}
-          {/* Display Duplicates for UI layout visualization */}
+          {/* Inject temporary clone records scaling up the visual layout map specifically for design review block */}
           {teamData.map((member) => (
              <ProfileFlipCard key={member.id+"_copy"} member={{...member, name: member.name + " (Copy)"}} />
           ))}

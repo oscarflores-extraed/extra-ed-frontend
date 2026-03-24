@@ -1,8 +1,21 @@
+/**
+ * @file Programs.jsx
+ * @description Master Directory mapping across the comprehensive Extra Ed dynamic catalog.
+ * 
+ * **React State Logic Breakdown:**
+ * This component runs an isolated internal React state bound precisely to the `searchTerm` input text box.
+ * The internal `.filter()` logic is intentionally highly-aggressive: It recursively scans a program's native Title, 
+ * its static description, AND drops entirely into its `features` array mapping inside `programs.json` to 
+ * detect keyword overlap ensuring powerful global searching behavior without an SQL connection block.
+ */
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ArrowRight } from 'lucide-react';
-import programsData from '../data/programs.json';
+
+// Fixed deep-level path resolving the nested `05_programs` root migration restructure
+import programsData from '../../data/programs.json';
 
 const ProgramCard = ({ program }) => {
   return (
@@ -15,7 +28,10 @@ const ProgramCard = ({ program }) => {
       whileHover={{ y: -10, scale: 1.02 }}
       className="bg-white/70 backdrop-blur-xl border border-white shadow-xl hover:shadow-2xl rounded-[2rem] overflow-hidden cursor-pointer group flex flex-col h-full"
     >
-      {/* Image Thumbnail Placeholder */}
+      {/* 
+        Image Thumbnail Placeholder Block
+        Dynamically generates background gradient hues triggering pure Tailwind group-hover interactions
+      */}
       <div className="h-56 bg-slate-200 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent group-hover:from-blue-600/30 transition-colors z-10 duration-500"></div>
         <div className="absolute inset-0 flex items-center justify-center text-slate-500 bg-slate-100">
@@ -27,6 +43,11 @@ const ProgramCard = ({ program }) => {
         <h3 className="text-2xl font-extrabold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors">{program.title}</h3>
         <p className="text-slate-600 mb-8 flex-grow leading-relaxed font-light">{program.shortDescription}</p>
         
+        {/* 
+          CRITICAL ROUTING NOTE: 
+          This currently strictly links to `/programs/:id`. However, in the updated Static SEO mapping, 
+          these router endpoints might be specifically hardcoded directly against `.ca/slugs`. Look carefully here.
+        */}
         <Link 
           to={`/programs/${program.id}`}
           className="mt-auto flex items-center gap-2 text-blue-600 font-bold group-hover:text-blue-800 transition-colors"
@@ -39,8 +60,10 @@ const ProgramCard = ({ program }) => {
 };
 
 const Programs = () => {
+  // Initiating the real-time keystroke intercept mapping for the Master input search field
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Execution layer filtering the internal imported Data block string array checks
   const filteredPrograms = programsData.filter((program) => 
     program.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     program.shortDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -49,7 +72,7 @@ const Programs = () => {
 
   return (
     <div className="min-h-screen pt-40 pb-24 px-6 bg-slate-50 relative">
-      {/* Background Decorative Blobs for Glassmorphism Context */}
+      {/* Visual Background Decorative Blobs executing pure CSS Glassmorphism aesthetic Context rendering */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-[10%] -right-[5%] w-[40%] h-[40%] rounded-full bg-blue-300/20 blur-[120px]"></div>
         <div className="absolute top-[30%] -left-[10%] w-[30%] h-[30%] rounded-full bg-indigo-300/20 blur-[120px]"></div>
@@ -71,7 +94,7 @@ const Programs = () => {
           </p>
         </motion.div>
 
-        {/* Search / Filter Bar */}
+        {/* Dynamic Search Interceptor Block mapping React form inputs state hooks execution routines natively */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -92,7 +115,7 @@ const Programs = () => {
           </div>
         </motion.div>
 
-        {/* Dynamic Grid */}
+        {/* Display rendering block evaluating strict internal lengths filtering the array count numbers output */}
         <div className="mb-12">
           <p className="text-slate-500 font-medium mb-8 pl-2">
             Showing {filteredPrograms.length} {filteredPrograms.length === 1 ? 'program' : 'programs'}
