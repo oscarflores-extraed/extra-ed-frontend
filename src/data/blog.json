@@ -1,0 +1,14 @@
+[
+  {
+    "id": "blog-1",
+    "title": "The Kids Gambit: How Chess Helps Young Minds Grow",
+    "slug": "the-kids-gambit-how-chess-helps-young-minds-grow",
+    "date": "2023-05-10"
+  },
+  {
+    "id": "blog-2",
+    "title": "Building Bright Young Minds: LEGO Robotics for Emerging Engineers",
+    "slug": "building-bright-young-minds-lego-robotics-for-emerging-engineers",
+    "date": "2023-06-15"
+  }
+]

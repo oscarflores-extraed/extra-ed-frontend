@@ -1,0 +1,16 @@
+[
+  {
+    "id": "team-member-1",
+    "name": "Jane Example",
+    "role": "Executive Director",
+    "bio": "Dedicated to community growth.",
+    "flipQuote": "Education is the most powerful weapon which you can use to change the world."
+  },
+  {
+    "id": "team-member-2",
+    "name": "John Sample",
+    "role": "Program Coordinator",
+    "bio": "Expert in STEM execution.",
+    "flipQuote": "Science is a way of thinking much more than it is a body of knowledge."
+  }
+]

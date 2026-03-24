@@ -1,0 +1,84 @@
+[
+  {
+    "category": "STEM",
+    "programs": [
+      { "id": "chess-extraed", "title": "Chess", "tagline": "Pawn to King 4." },
+      { "id": "coding", "title": "Coding" },
+      { "id": "lego-extraed", "title": "LEGO" },
+      { "id": "lego-robotics", "title": "LEGO Robotics" },
+      { "id": "minecraft", "title": "Minecraft Education" },
+      { "id": "science-extraed", "title": "Science" }
+    ]
+  },
+  {
+    "category": "Life Skills",
+    "programs": [
+      { "id": "entrepreneurship", "title": "Entrepreneurship" },
+      { "id": "money-managers", "title": "Money Managers" },
+      { "id": "safe-and-sound-on-your-own", "title": "Safe and Sound On Your Own" },
+      { "id": "wilderness-explorers", "title": "Wilderness Explorers" }
+    ]
+  },
+  {
+    "category": "Visual Arts",
+    "programs": [
+      { "id": "art-extraed", "title": "Art Club" },
+      { "id": "comic-book-art", "title": "Comic Book Art" },
+      { "id": "crafting-extraed", "title": "Crafting" },
+      { "id": "drawing-sketching", "title": "Drawing & Sketching" },
+      { "id": "mixed-media-art", "title": "Mixed Media Art" },
+      { "id": "sewing", "title": "Sewing" }
+    ]
+  },
+  {
+    "category": "Music",
+    "programs": [
+      { "id": "guitar", "title": "Guitar" },
+      { "id": "music-club", "title": "Music Club" },
+      { "id": "ukulele", "title": "Ukulele" }
+    ]
+  },
+  {
+    "category": "Performance",
+    "programs": [
+      { "id": "drama", "title": "Drama" },
+      { "id": "magic", "title": "Magic" },
+      { "id": "musical-theatre", "title": "Musical Theatre" }
+    ]
+  },
+  {
+    "category": "Media Arts",
+    "programs": [
+      { "id": "digital-art", "title": "Digital Art" },
+      { "id": "short-video-creation", "title": "Short Video Creation" },
+      { "id": "stop-motion-animation", "title": "Stop Motion Animation" },
+      { "id": "video-game-design", "title": "Video Game Design" }
+    ]
+  },
+  {
+    "category": "Athletics",
+    "programs": [
+      { "id": "badminton", "title": "Badminton" },
+      { "id": "basketball", "title": "Basketball" },
+      { "id": "gymnastics", "title": "Gymnastics" },
+      { "id": "martial-arts", "title": "Martial Arts" },
+      { "id": "multi-sports", "title": "Multi-Sport" },
+      { "id": "pickleball", "title": "Pickleball" },
+      { "id": "play-hacking", "title": "Play Hacking" },
+      { "id": "soccer", "title": "Soccer" },
+      { "id": "ultimate-frisbee", "title": "Ultimate Frisbee" },
+      { "id": "yoga", "title": "Yoga" }
+    ]
+  },
+  {
+    "category": "Kindergarten",
+    "programs": [
+      { "id": "kindergarten-arts-crafts", "title": "Arts & Crafts" },
+      { "id": "kindergarten-chess", "title": "Chess" },
+      { "id": "kindergarten-drama", "title": "Drama" },
+      { "id": "kindergarten-multi-sport", "title": "Multi-Sport" },
+      { "id": "kindermusic", "title": "Music" },
+      { "id": "kindergarten-science", "title": "Science" }
+    ]
+  }
+]
