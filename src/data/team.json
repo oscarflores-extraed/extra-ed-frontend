@@ -1,16 +1,66 @@
 [
   {
-    "id": "team-member-1",
-    "name": "Jane Example",
-    "role": "Executive Director",
-    "bio": "Dedicated to community growth.",
-    "flipQuote": "Education is the most powerful weapon which you can use to change the world."
+    "id": "yakos",
+    "name": "Yakos Spiliotopoulos",
+    "role": "Chairman",
+    "bio": "Yakos is the founder of Extra Ed. He built Extra Ed with the goal of making educational experiences for kids meaningful, challenging, accessible, and fun. He ensures that Extra Ed sets an example by actively working to restore and protect the environment.",
+    "flipQuote": "A highly-engaged father of three, Yakos has a firsthand appreciation for the value of nurturing and supporting the next generation as they learn and grow.",
+    "imagePath": "../../assets/03_our_team/yakos.png"
   },
   {
-    "id": "team-member-2",
-    "name": "John Sample",
-    "role": "Program Coordinator",
-    "bio": "Expert in STEM execution.",
-    "flipQuote": "Science is a way of thinking much more than it is a body of knowledge."
+    "id": "katya",
+    "name": "Katya Rudzik",
+    "role": "Director",
+    "bio": "Katya is the Director of Extra Ed. With over 20 years of leadership experience in education, she is responsible for working with schools, community groups, and organizations to ensure that Extra Ed provides innovative, relevant and rewarding educational experiences.",
+    "flipQuote": "Katya has a Master’s of Museum Studies and has worked for a number of educational organizations, consulting with a diversity of communities to develop innovative programs.",
+    "imagePath": "../../assets/03_our_team/katya.png"
+  },
+  {
+    "id": "anna",
+    "name": "Anna Hebert",
+    "role": "Director of Programs",
+    "bio": "Anna is Extra Ed's Head of Curriculum Development. She is responsible for the hiring, training, and quality assurance of our instructional staff. Her teaching philosophy incorporates play and storytelling into the classroom to foster engagement, participation and growth.",
+    "flipQuote": "Anna is an OCT certified teacher. She has an MEd from the University of Ontario Institute of Technology, a BA in Child and Youth Studies, and a BEd from Brock University.",
+    "imagePath": "../../assets/03_our_team/anna.png"
+  },
+  {
+    "id": "bliss",
+    "name": "Bliss Man",
+    "role": "Director of Operations",
+    "bio": "Bliss is responsible for Extra Ed’s daily operations and systems management. With previous experience as co-founder and executive director of a designer toy company, she brings over 15 years of business leadership and operations expertise.",
+    "flipQuote": "Bliss has a Bachelor of Design in Fashion from TMU.",
+    "imagePath": "../../assets/03_our_team/bliss.png"
+  },
+  {
+    "id": "adam",
+    "name": "Adam Dunn",
+    "role": "Financial Director",
+    "bio": "Adam calls on his expertise in business planning, operational systems, and cash flow management as he oversees the fiscal health of Extra Ed. He is adept at streamlining processes and aligning financial strategies with growth.",
+    "flipQuote": "Adam has a BFA from OCADU and nearly 20 years experience in small business leadership.",
+    "imagePath": "../../assets/03_our_team/adam.png"
+  },
+  {
+    "id": "sophya",
+    "name": "Sophya Yumakulov",
+    "role": "Office Administrator",
+    "bio": "Sophya is Extra Ed's Office Administrator. A former instructor at Extra Ed, she now works hard behind the scenes as our primary point of contact, maintaining our registration system and supporting the rest of the team in doing their best work.",
+    "flipQuote": "Sophya has over a decade of experience in academic teaching and project management, as well as anthropological training and a Master in Community Health Sciences.",
+    "imagePath": "../../assets/03_our_team/sophya.png"
+  },
+  {
+    "id": "piotr",
+    "name": "Piotr Tomaszewski",
+    "role": "Logistics Manager",
+    "bio": "Piotr is responsible for equipping Extra Ed's staff with everything that they need to deliver clubs. He has been teaching guitar for 20 years, during which time he also worked in Early Childhood education for a decade.",
+    "flipQuote": "Piotr has a Bachelor in International Studies with a minor in French from Glendon.",
+    "imagePath": "../../assets/03_our_team/piotr.png"
+  },
+  {
+    "id": "oscar",
+    "name": "Oscar Flores",
+    "role": "Marketing Specialist & Video Editor",
+    "bio": "Oscar is a creative marketer and video editor with a background in both Creative Arts and Computer Science. He brings a balance of storytelling and technical expertise to his work, combining strong visual instincts with an understanding of digital tools and workflows.",
+    "flipQuote": "At Extra Ed, Oscar supports marketing initiatives through video production and content creation, helping share the organization’s impact in engaging and meaningful ways.",
+    "imagePath": "../../assets/03_our_team/oscar.png"
   }
 ]

@@ -26,7 +26,8 @@ import OurTeam from './pages/03_our_team/OurTeam';
 import EconomicInclusivity from './pages/04_economic_inclusivity/EconomicInclusivity';
 
 // 05_programs: Represents the Master Repository.
-import Programs from './pages/05_programs/Programs';
+import ProgramsLanding from './pages/05_programs/ProgramsLanding';
+import ChessExtraEd from './pages/05_programs/01_stem/ChessExtraEd';
 // ProgramDetail acts as the structural wrapper template for all future bespoke static routes.
 import ProgramDetail from './pages/05_programs/ProgramDetail'; 
 
@@ -74,7 +75,10 @@ function App() {
           <Route path="donate" element={<Donate />} />
 
           {/* Master Program Index */}
-          <Route path="programs" element={<Programs />} />
+          <Route path="programs" element={<ProgramsLanding />} />
+          
+          {/* Mapped Static Endpoint Sample */}
+          <Route path="chess-extraed" element={<ChessExtraEd />} />
           
           {/* Placeholder Dynamic Catch-all / Base Template Demo */}
           <Route path="programs/:id" element={<ProgramDetail />} />
