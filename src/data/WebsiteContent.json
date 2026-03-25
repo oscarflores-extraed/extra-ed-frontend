@@ -1,6 +1,8 @@
 {
     "programs": [
         {
+            "Category": "STEM",
+            "slug": "/chess-extraed/",
             "Club title": "Chess",
             "Tagline": "Pawn to King 4.",
             "Blurb 1 title": "Cognitive benefits.",
@@ -26,6 +28,7 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
             "Club title": "Chess for STEM and SEL/\u00c9checs pour STIM et AS",
             "Tagline": "Bringing chess to the classroom.",
             "Blurb 1 title": "Learning through chess.",
@@ -44,6 +47,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
+            "slug": "/coding/",
             "Club title": "Coding",
             "Tagline": ">>> print(\u2018Hello World!\u2019)",
             "Blurb 1 title": "Follow the logic.",
@@ -67,6 +72,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
+            "slug": "/lego-extraed/",
             "Club title": "LEGO\u00ae",
             "Tagline": "Building is better with friends.",
             "Blurb 1 title": "Teamwork.",
@@ -91,6 +98,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
+            "slug": "/lego-robotics/",
             "Club title": "LEGO\u00ae Robotics",
             "Tagline": "Nimble fingers, nimble minds.",
             "Blurb 1 title": "Build as a team.",
@@ -115,6 +124,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
+            "slug": "/minecraft/",
             "Club title": "Minecraft: Education",
             "Tagline": "The total brain workout!",
             "Blurb 1 title": "Crafting knowledge.",
@@ -139,6 +150,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "STEM",
+            "slug": "/science-extraed/",
             "Club title": "Science",
             "Tagline": "Actions and reactions.",
             "Blurb 1 title": "Get experimental.",
@@ -162,6 +175,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Life Skills",
+            "slug": "/money-managers/",
             "Club title": "Money Managers",
             "Tagline": "Tools for your financial future.",
             "Blurb 1 title": "Financial literacy.",
@@ -183,6 +198,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Life Skills",
+            "slug": "/entrepreneurship/",
             "Club title": "Entrepreneurship",
             "Tagline": "It's never too early to start your start up.",
             "Blurb 1 title": "Get the basics.",
@@ -204,6 +221,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Life Skills",
+            "slug": "/safe-and-sound-on-your-own/",
             "Club title": "Safe and Sound On Your Own",
             "Tagline": "Resiliance through self-reliance.",
             "Blurb 1 title": "Home alone.",
@@ -225,6 +244,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Life Skills",
+            "slug": "/wilderness-explorers/",
             "Club title": "Wilderness Explorers",
             "Tagline": "Survival skills start here.",
             "Blurb 1 title": "Ready for anything.",
@@ -247,6 +268,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/drawing-sketching/",
             "Club title": "Drawing and Sketching",
             "Tagline": "Ready your pencils.",
             "Blurb 1 title": "Have fun with it.",
@@ -269,6 +292,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/mixed-media-art/",
             "Club title": "Mixed Media Art",
             "Tagline": "Imagination on display.",
             "Blurb 1 title": "Discover new potential.",
@@ -291,6 +316,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/comic-book-art/",
             "Club title": "Comic Book Art",
             "Tagline": "Adventure awaits.",
             "Blurb 1 title": "Design characters.",
@@ -313,6 +340,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/art-extraed/",
             "Club title": "Art",
             "Tagline": "The world is your canvas.",
             "Blurb 1 title": "Learn new techniques.",
@@ -335,6 +364,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/crafting-extraed/",
             "Club title": "Crafting",
             "Tagline": "Busy hands, happy minds.",
             "Blurb 1 title": "Learn new skills.",
@@ -356,6 +387,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Visual Arts",
+            "slug": "/sewing/",
             "Club title": "Sewing",
             "Tagline": "Follow the thread.",
             "Blurb 1 title": "Hand stitching.",
@@ -378,6 +411,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Performance",
+            "slug": "/magic/",
             "Club title": "Magic",
             "Tagline": "And for our next trick\u2026",
             "Blurb 1 title": "Conjure up confidence.",
@@ -399,6 +434,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Performance",
+            "slug": "/magic/",
             "Club title": "Musical Theatre",
             "Tagline": "Calling all triple-threats!",
             "Blurb 1 title": "Sing a story.",
@@ -421,6 +458,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Performance",
+            "slug": "/drama/",
             "Club title": "Drama",
             "Tagline": "Step into the spotlight.",
             "Blurb 1 title": "Listen closely.",
@@ -443,6 +482,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Media Arts",
+            "slug": "/stop-motion-animation/",
             "Club title": "Stop Motion Animation",
             "Tagline": "Telling stories, frame-by-frame.",
             "Blurb 1 title": "Making art that moves.",
@@ -465,6 +506,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Media Arts",
+            "slug": "/short-video-creation/",
             "Club title": "Short Video Creation",
             "Tagline": "Lights, camera, action!",
             "Blurb 1 title": "Direct the action.",
@@ -486,6 +529,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Media Arts",
+            "slug": "/digital-art/",
             "Club title": "Digital Art",
             "Tagline": "Painting pictures, pixel-by-pixel.",
             "Blurb 1 title": "Intro to digital images.",
@@ -507,6 +552,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Media Arts",
+            "slug": "/video-game-design/",
             "Club title": "Video Game Design",
             "Tagline": "Ready player one.",
             "Blurb 1 title": "Bring your ideas to life.",
@@ -530,6 +577,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/multi-sports/",
             "Club title": "Multi-Sport",
             "Tagline": "Drop that screen and break a sweat.",
             "Blurb 1 title": "Let's get moving.",
@@ -552,6 +601,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/yoga/",
             "Club title": "Yoga",
             "Tagline": "It\u2019s never too early for sun salutations.",
             "Blurb 1 title": "Strengthen and lengthen.",
@@ -574,6 +625,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/basketball/",
             "Club title": "Basketball",
             "Tagline": "Nothing but net.",
             "Blurb 1 title": "Sharpen you skills.",
@@ -596,6 +649,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/soccer/",
             "Club title": "Soccer",
             "Tagline": "Come play the beautiful game.",
             "Blurb 1 title": "Skills Training",
@@ -618,6 +673,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/ultimate-frisbee/",
             "Club title": "Ultimate Frisbee",
             "Tagline": "Elevate your game.",
             "Blurb 1 title": "Keep fit.",
@@ -640,6 +697,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/pickleball/",
             "Club title": "Pickleball",
             "Tagline": "Dink, Dive, and Smash!",
             "Blurb 1 title": "Hone your skills.",
@@ -662,6 +721,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/martial-arts/",
             "Club title": "Martial Arts",
             "Tagline": "Kickstart confidence.",
             "Blurb 1 title": "Mix it up.",
@@ -684,6 +745,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/badminton/",
             "Club title": "Badminton",
             "Tagline": "Rackets at the ready.",
             "Blurb 1 title": "Refine Your Skills.",
@@ -706,6 +769,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Athletics",
+            "slug": "/gymnastics/",
             "Club title": "Gymnastics",
             "Tagline": "Bend, balance and shine.",
             "Blurb 1 title": "Splits and scissor kicks.",
@@ -728,6 +793,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Music",
+            "slug": "/guitar/",
             "Club title": "Guitar",
             "Tagline": "Are you ready to rock?!! (on acoustic guitar)",
             "Blurb 1 title": "Play right away.",
@@ -750,6 +817,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Music",
+            "slug": "/ukulele/",
             "Club title": "Ukulele",
             "Tagline": "Little hands, big songs.",
             "Blurb 1 title": "Move those fingers.",
@@ -772,6 +841,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Music",
+            "slug": "/music-club/",
             "Club title": "Music Club",
             "Tagline": "And a one, and a two\u2026",
             "Blurb 1 title": "Music play.",
@@ -793,6 +864,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Music",
+            "slug": "/piano/",
             "Club title": "Piano",
             "Tagline": "Starting at middle C\u2026",
             "Blurb 1 title": "The language of music.",
@@ -814,6 +887,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Kindergarten",
+            "slug": "/kindergarten-science/",
             "Club title": "Kindergarten Science",
             "Tagline": "Actions and reactions.",
             "Blurb 1 title": "Get experimental.",
@@ -835,6 +910,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Kindergarten",
+            "slug": "/kindergarten-chess/",
             "Club title": "Kindergarten Chess",
             "Tagline": "Make your opening move.",
             "Blurb 1 title": "Welcome to chess.",
@@ -856,6 +933,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Kindergarten",
+            "slug": "/kindergarten-arts-crafts/",
             "Club title": "Kindergarten Arts & Crafts",
             "Tagline": "Time to roll up your sleeves and don your smock!",
             "Blurb 1 title": "Hands-on art.",
@@ -878,6 +957,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Kindergarten",
+            "slug": "/kindergarten-drama/",
             "Club title": "Kindergarten Drama",
             "Tagline": "All the world\u2019s a stage\u2026",
             "Blurb 1 title": "The art of play.",
@@ -899,6 +980,8 @@
             "Language - title": "Available in English and French."
         },
         {
+            "Category": "Kindergarten",
+            "slug": "/kindergarten-multi-sport/",
             "Club title": "Kindergarten Multi-Sport",
             "Tagline": "Break a sweat and have some fun.",
             "Blurb 1 title": "Get those bodies moving.",
